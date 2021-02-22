@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 require 'pry'
+
+
+# TODO: Look into meta programming/macro
+# Function that defines other functions
 module MarvelCharacters
   class QueryBuilder
     attr_reader :authorize
@@ -41,5 +45,11 @@ module MarvelCharacters
       md5.update(ts.to_s + MARVEL_PRIVATE_KEY + MARVEL_PUBLIC_KEY)
       @auth = { ts: ts, md5: md5 }
     end
+
+    # TODO: Create
+    def self.parse_response
+      
+    end
+    # END: TODO
   end
 end

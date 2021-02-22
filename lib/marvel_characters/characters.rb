@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-#   Allowed Parameters:
+#   Allowed Parameters: Use safe_params
+#   Add help that vverifies the params are the right data type
+#  Await in the GEM.  Normalize the response
 #   Parameter                                           Data Type
 #   - name	                                            string
 #   - nameStartsWith	                                  string
@@ -15,16 +17,18 @@
 
 module MarvelCharacters
   class Characters
+    QUERYNAME = 'characters'
+
     def self.find(id)
-      MarvelCharacters::QueryBuilder.find('characters', id)
+      MarvelCharacters::QueryBuilder.find(QUERYNAME, id)
     end
 
     def self.all
-      MarvelCharacters::QueryBuilder.all('characters')
+      MarvelCharacters::QueryBuilder.all(QUERYNAME)
     end
 
     def self.where(params)
-      MarvelCharacters::QueryBuilder.query_builder('characters', params)
+      MarvelCharacters::QueryBuilder.query_builder(QUERYNAME, params)
     end
   end
 end
