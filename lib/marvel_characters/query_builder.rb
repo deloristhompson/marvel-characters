@@ -2,7 +2,6 @@
 
 require 'pry'
 
-
 # TODO: Look into meta programming/macro
 # Function that defines other functions
 module MarvelCharacters
@@ -48,7 +47,6 @@ module MarvelCharacters
 
     # TODO: Create
     def self.parse_response
-      
     end
     # END: TODO
   end

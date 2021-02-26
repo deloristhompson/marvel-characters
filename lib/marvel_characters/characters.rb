@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 #   Allowed Parameters: Use safe_params
-#   Add help that vverifies the params are the right data type
+#   Add help that verifies the params are the right data type
 #  Await in the GEM.  Normalize the response
 #   Parameter                                           Data Type
 #   - name	                                            string

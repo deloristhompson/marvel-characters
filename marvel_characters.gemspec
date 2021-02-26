@@ -32,4 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'sinatra', '~> 2.1.0'
   spec.add_development_dependency 'http', '~> 4.4', '>= 4.4.1'
   spec.add_development_dependency 'rubocop', '~> 1.9', '>= 1.9.1'
+  spec.add_development_dependency 'rubocop-rake'
+  spec.add_development_dependency 'rubocop-rspec'
 end

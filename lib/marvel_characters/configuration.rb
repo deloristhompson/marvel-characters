@@ -15,20 +15,14 @@ module MarvelCharacters
       @api_version = 1
     end
 
-    private
-
     def private_key
-      unless @private_key
-        raise 'Missing ENV for Private key'
-      end
+      raise 'Missing ENV for Private key' unless @private_key
 
       @private_key
     end
 
     def public_key
-      unless @public_key
-        raise 'Missing ENV for Private key'
-      end
+      raise 'Missing ENV for Private key' unless @public_key
 
       @public_key
     end

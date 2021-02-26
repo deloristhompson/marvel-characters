@@ -22,29 +22,29 @@ module MarvelCharacters
 
   autoload :Comics, 'marvel_characters/comics.rb'
   autoload :Characters, 'marvel_characters/characters.rb'
-
-  # TODO: Finish this first!!! Create Specs <-------
   autoload :Configuration, 'marvel_characters/configuration.rb'
 
   # TODO: Create Specs
   autoload :QueryBuilder, 'marvel_characters/query_builder.rb'
 
-  class Error < StandardError; end
+  class Errors
+    class ConfigurationError < StandardError; end
+  end
 
   class << self
     # Allow writing to the configuration method
     attr_writer :configuration
+  end
 
-    def self.configuration
-      @configuration ||= Configuration.new
-    end
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
 
-    def self.configure
-      yield(configuration)
-    end
+  def self.configure
+    yield(configuration)
+  end
 
-    def self.reset
-      @configuration = Configuration.new
-    end
+  def self.reset
+    @configuration = Configuration.new
   end
 end
