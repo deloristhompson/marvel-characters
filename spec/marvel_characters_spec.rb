@@ -24,7 +24,7 @@ RSpec.describe MarvelCharacters do
   describe 'MarvelCharacters' do
     pirate = {
       marvel_public_key: 'MY_API_KEY',
-      marvel_private_key: 'MY_PREVIEW_API_KEY',
+      marvel_private_key: 'MY_PREVIEW_API_KEY'
     }
 
     it 'has a version number' do
@@ -44,7 +44,7 @@ RSpec.describe MarvelCharacters do
     it 'raises if accessed key missing in config' do
       pirate = {
         marvel_public_key: 'MY_API_KEY',
-        marvel_private_key: nil,
+        marvel_private_key: nil
       }
 
       described_class.configure do |config|

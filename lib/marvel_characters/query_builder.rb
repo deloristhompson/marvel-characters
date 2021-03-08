@@ -21,7 +21,7 @@ module MarvelCharacters
       url = ''
 
       params.each do |key, value|
-        url += "#{key}=#{value}&"
+        url += "#{key}=#{ERB::Util.url_encode(value)}&"
       end
 
       uri = "#{MARVEL_END_POINT}#{end_point}?#{url}ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"

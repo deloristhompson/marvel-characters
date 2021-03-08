@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module MarvelCharacters
-  class Creators
-    QUERYNAME = 'creators'
+  class Stories
+    QUERYNAME = 'stories'
 
     def self.find(id)
       MarvelCharacters::QueryBuilder.find(QUERYNAME, id)
