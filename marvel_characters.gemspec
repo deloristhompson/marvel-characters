@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Deloris Thompson']
   spec.email         = ['deloris@echobind.com']
 
-  spec.summary       = 'Message Write a short summary, because RubyGems requires one.'
-  spec.description   = 'Message Write a longer description or delete this line.'
+  spec.summary       = 'Connect to Marvels API without having to deal with the extra code.'
+  spec.description   = 'Marvel Characters allows any user to successfully connect to the Marvel API. Grab everything from the creators to the comics with a simple query.'
   spec.homepage      = 'https://github.com/deloristhompson/marvel-characters.git'
   spec.license       = 'MIT'
   # spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
