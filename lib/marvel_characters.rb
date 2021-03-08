@@ -23,6 +23,7 @@ module MarvelCharacters
   autoload :Comics, 'marvel_characters/comics.rb'
   autoload :Characters, 'marvel_characters/characters.rb'
   autoload :Configuration, 'marvel_characters/configuration.rb'
+  autoload :Creators, 'marvel_characters/creators.rb'
 
   # TODO: Create Specs
   autoload :QueryBuilder, 'marvel_characters/query_builder.rb'

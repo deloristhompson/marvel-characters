@@ -25,8 +25,6 @@ RSpec.describe MarvelCharacters do
     pirate = {
       marvel_public_key: 'MY_API_KEY',
       marvel_private_key: 'MY_PREVIEW_API_KEY',
-      marvel_space: 'MY_CONTENTFUL_SPACE',
-      marvel_environment: 'MY_CONTENTFUL_ENVIRONMENT'
     }
 
     it 'has a version number' do
@@ -47,8 +45,6 @@ RSpec.describe MarvelCharacters do
       pirate = {
         marvel_public_key: 'MY_API_KEY',
         marvel_private_key: nil,
-        marvel_space: 'MY_CONTENTFUL_SPACE',
-        marvel_environment: 'MY_CONTENTFUL_ENVIRONMENT'
       }
 
       described_class.configure do |config|
@@ -57,10 +53,7 @@ RSpec.describe MarvelCharacters do
       end
 
       expect(described_class.configuration.public_key).to eq pirate[:marvel_public_key]
-      # expect { described_class.configuration.private_key }.to raise_error(
-      #   MarvelCharacters::Errors::ConfigurationError,
-      #   'RuntimeError: Missing ENV for Private key'
-      # )
+      expect { described_class.configuration.private_key }.to raise_error(RuntimeError)
     end
   end
 end
