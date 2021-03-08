@@ -10,7 +10,7 @@ module MarvelCharacters
 
     def self.all(end_point)
       authorize
-      uri = "#{MARVEL_END_POINT}#{end_point}?ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
+      uri = "#{MARVEL_BASE_URL}#{end_point}?ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
 
       res = HTTP.get(uri)
       res.parse
@@ -24,7 +24,7 @@ module MarvelCharacters
         url += "#{key}=#{ERB::Util.url_encode(value)}&"
       end
 
-      uri = "#{MARVEL_END_POINT}#{end_point}?#{url}ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
+      uri = "#{MARVEL_BASE_URL}#{end_point}?#{url}ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
 
       res = HTTP.get(uri)
       res.parse
@@ -32,7 +32,7 @@ module MarvelCharacters
 
     def self.find(end_point, id)
       authorize
-      uri = "#{MARVEL_END_POINT}#{end_point}/#{id}?ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
+      uri = "#{MARVEL_BASE_URL}#{end_point}/#{id}?ts=#{@auth[:ts]}&apikey=#{MARVEL_PUBLIC_KEY}&hash=#{@auth[:md5]}"
 
       res = HTTP.get(uri)
       res.parse
