@@ -9,8 +9,8 @@ require 'pry'
 require 'http'
 
 module MarvelCharacters
-  MARVEL_PUBLIC_KEY = 'cf94c2809a72c81a1f404fc182994e3b'
-  MARVEL_PRIVATE_KEY = '9f52540e790e612ee960dc1be5062072919c515d'
+  # MARVEL_PUBLIC_KEY = 'cf94c2809a72c81a1f404fc182994e3b'
+  # MARVEL_PRIVATE_KEY = '9f52540e790e612ee960dc1be5062072919c515d'
   MARVEL_BASE_URL = 'https://gateway.marvel.com:443/v1/public/'
 
   autoload :Comics, 'marvel_characters/comics.rb'
