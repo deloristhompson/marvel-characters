@@ -23,8 +23,8 @@ end
 RSpec.describe MarvelCharacters do
   describe 'MarvelCharacters' do
     pirate = {
-      marvel_public_key: 'MY_API_KEY',
-      marvel_private_key: 'MY_PREVIEW_API_KEY'
+      marvel_public_key: 'cf94c2809a72c81a1f404fc182994e3b',
+      marvel_private_key: '9f52540e790e612ee960dc1be5062072919c515d'
     }
 
     it 'has a version number' do

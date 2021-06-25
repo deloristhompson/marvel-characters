@@ -3,6 +3,16 @@
 require 'spec_helper'
 
 RSpec.describe MarvelCharacters::Creators do
+  pirate = {
+    marvel_public_key: 'testKey',
+    marvel_private_key: 'testPrivateKey'
+  }
+
+  MarvelCharacters.configure do |config|
+    config.public_key = pirate[:marvel_public_key]
+    config.private_key = pirate[:marvel_private_key]
+  end
+
   context 'when requesting all creators' do
     response = described_class.all
 

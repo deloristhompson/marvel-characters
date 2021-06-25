@@ -22,7 +22,7 @@ module MarvelCharacters
     end
 
     def public_key
-      raise 'Missing ENV for Private key' unless @public_key
+      raise 'Missing ENV for Public key' unless @public_key
 
       @public_key
     end
